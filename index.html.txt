@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3. Ayımız Kutlu Olsun Sevgilim ❤️</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Dancing+Script:wght@700&display=swap');
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #fce4ec 0%, #f8bbd0 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #4a148c;
+            overflow-x: hidden;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 90%;
+            text-align: center;
+            transition: opacity 0.5s ease;
+        }
+
+        h1 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.5rem;
+            color: #d81b60;
+            margin-bottom: 20px;
+        }
+
+        .question-box {
+            margin-top: 20px;
+        }
+
+        .question-text {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 25px;
+            color: #333;
+        }
+
+        .options-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .option-btn {
+            background-color: #f48fb1;
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 50px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+        }
+
+        .option-btn:hover {
+            background-color: #d81b60;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(216, 27, 96, 0.3);
+        }
+
+        .error-message {
+            color: #d32f2f;
+            margin-top: 20px;
+            font-weight: 600;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            min-height: 24px;
+        }
+
+        .shake {
+            animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both;
+        }
+
+        @keyframes shake {
+            10%, 90% { transform: translate3d(-1px, 0, 0); }
+            20%, 80% { transform: translate3d(2px, 0, 0); }
+            30%, 50%, 70% { transform: translate3d(-4px, 0, 0); }
+            40%, 60% { transform: translate3d(4px, 0, 0); }
+        }
+
+        /* Celebration Screen */
+        .celebration-screen {
+            display: none;
+        }
+
+        .message {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            color: #444;
+        }
+
+        .gallery {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .photo-card {
+            flex: 1;
+            min-width: 150px;
+            background: white;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transform: rotate(-2deg);
+            transition: transform 0.3s ease;
+        }
+
+        .photo-card:nth-child(even) {
+            transform: rotate(2deg);
+        }
+
+        .photo-card:hover {
+            transform: scale(1.05) rotate(0);
+            z-index: 2;
+        }
+
+        .photo-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        .photo-caption {
+            margin-top: 10px;
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.2rem;
+            color: #d81b60;
+        }
+
+        @media (max-width: 480px) {
+            .gallery {
+                flex-direction: column;
+            }
+            .photo-card {
+                transform: none !important;
+                margin-bottom: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container" id="quizContainer">
+        <h1>Aşk Testimiz ❤️</h1>
+        <div class="question-box">
+            <div class="question-text" id="questionText">Soru yükleniyor...</div>
+            <div class="options-container" id="optionsContainer">
+                </div>
+            <div class="error-message" id="errorMessage">Yanlış Cevap, Tekrar Seç! 💔</div>
+        </div>
+    </div>
+
+    <div class="container celebration-screen" id="celebrationContainer">
+        <h1>3. Ayımız Kutlu Olsun! 🎉</h1>
+        <div class="message">
+            Sevgilim Ceylin,<br><br>
+            Tüm soruları doğru bildin, zaten senden başka kim bu kadar iyi bilebilirdi ki? Seninle geçen bu 3 ay hayatımın en güzel zamanlarıydı. Unutkanlıklarıma sabrettiğin, benimle bu güzel anıları paylaştığın ve hayatıma neşe kattığın için teşekkür ederim. Seni çok seviyorum, daha nice güzel aylarımız ve yıllarımız olsun! ❤️
+        </div>
+        <div class="gallery">
+            <div class="photo-card">
+                <img src="WhatsApp Image 2026-04-15 at 16.42.30.jpg" alt="1. Ay">
+                <div class="photo-caption">1. Ayımız</div>
+            </div>
+            <div class="photo-card">
+                <img src="WhatsApp Image 2026-04-15 at 16.42.29 (1).jpeg" alt="2. Ay">
+                <div class="photo-caption">2. Ayımız</div>
+            </div>
+            <div class="photo-card">
+                <img src="WhatsApp Image 2026-04-15 at 16.42.29.jpeg" alt="3. Ay">
+                <div class="photo-caption">3. Ayımız</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const questions = [
+            { question: "Beni seviyor musun?", options: ["Evet", "Hayır"], answer: "Evet" },
+            { question: "Konuşmaya ne zaman başladık?", options: ["8 Ocak", "16 Ocak", "26 Ocak"], answer: "16 Ocak" },
+            { question: "İlk buluşma yerimiz neresi?", options: ["AVM", "Avlu", "Paşa Alanı"], answer: "AVM" },
+            { question: "Çıkma teklifi tarihi ne zaman?", options: ["8 Şubat", "16 Şubat", "13 Şubat"], answer: "8 Şubat" },
+            { question: "Ceylin, Mertcan'ın en çok hangi özelliğinden yakınır?", options: ["Unutkanlık", "Heyecan", "Zekilik"], answer: "Unutkanlık" },
+            { question: "14 Şubat'ta hangi etkinliği yaptık?", options: ["Yürümek", "Bilardo", "Lego yaptık"], answer: "Lego yaptık" },
+            { question: "Mertcan'ın en çok yaptığı aktivite nedir?", options: ["Kart oynamak", "Bilardo", "Ceylin'i düşünmek"], answer: "Ceylin'i düşünmek" },
+            { question: "Kim daha çok uyur?", options: ["Mertcan", "Ceylin", "Hiç kimse"], answer: "Mertcan" },
+            { question: "Kim daha çok hareket eder?", options: ["Mertcan", "Ceylin", "Hiç kimse"], answer: "Mertcan" },
+            { question: "Kim daha tatlı?", options: ["Ceylin"], answer: "Ceylin" }
+        ];
+
+        let currentQuestionIndex = 0;
+
+        const questionTextElement = document.getElementById('questionText');
+        const optionsContainer = document.getElementById('optionsContainer');
+        const errorMessage = document.getElementById('errorMessage');
+        const quizContainer = document.getElementById('quizContainer');
+        const celebrationContainer = document.getElementById('celebrationContainer');
+
+        function loadQuestion() {
+            errorMessage.style.opacity = 0;
+            quizContainer.classList.remove('shake');
+            
+            const currentQuestion = questions[currentQuestionIndex];
+            questionTextElement.innerText = `${currentQuestionIndex + 1}. ${currentQuestion.question}`;
+            
+            optionsContainer.innerHTML = '';
+            
+            currentQuestion.options.forEach(option => {
+                const button = document.createElement('button');
+                button.innerText = option;
+                button.classList.add('option-btn');
+                button.onclick = () => checkAnswer(option, button);
+                optionsContainer.appendChild(button);
+            });
+        }
+
+        function checkAnswer(selectedOption, buttonElement) {
+            const currentQuestion = questions[currentQuestionIndex];
+            
+            if (selectedOption === currentQuestion.answer) {
+                // Doğru Cevap
+                currentQuestionIndex++;
+                if (currentQuestionIndex < questions.length) {
+                    loadQuestion();
+                } else {
+                    showCelebration();
+                }
+            } else {
+                // Yanlış Cevap
+                errorMessage.style.opacity = 1;
+                quizContainer.classList.remove('shake');
+                void quizContainer.offsetWidth; // trigger reflow
+                quizContainer.classList.add('shake');
+                buttonElement.style.backgroundColor = "#d32f2f";
+                setTimeout(() => {
+                    buttonElement.style.backgroundColor = "#f48fb1";
+                }, 800);
+            }
+        }
+
+        function showCelebration() {
+            quizContainer.style.display = 'none';
+            celebrationContainer.style.display = 'block';
+        }
+
+        // İlk soruyu yükle
+        loadQuestion();
+    </script>
+</body>
+</html>
